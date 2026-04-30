@@ -1,0 +1,35 @@
+{
+  "name": "@tannur/cli",
+  "version": "0.1.3",
+  "description": "CLI tool for Tannur Event-Sourced BaaS - deploy and manage your event-sourced applications",
+  "keywords": ["tannur", "cli", "event-sourcing", "baas", "deployment"],
+  "homepage": "https://github.com/Z10N-exe/tannur#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z10N-exe/tannur.git",
+    "directory": "packages/cli"
+  },
+  "license": "Apache-2.0",
+  "author": "Z10N-exe",
+  "bin": {
+    "tannur": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tannur/shared": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

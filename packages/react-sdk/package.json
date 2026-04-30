@@ -1,0 +1,54 @@
+{
+  "name": "@tannur/react",
+  "version": "0.1.0",
+  "description": "React SDK for Tannur Event-Sourced BaaS with hooks and Next.js SSR support",
+  "keywords": ["tannur", "event-sourcing", "baas", "react", "nextjs", "hooks", "typescript"],
+  "homepage": "https://github.com/Z10N-exe/tannur#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z10N-exe/tannur.git",
+    "directory": "packages/react-sdk"
+  },
+  "license": "MIT",
+  "author": "Z10N-exe",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --bundle",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tannur/shared": "*",
+    "tannur-universal": "*"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/react": "^18.0.0",
+    "@types/node": "^20.0.0",
+    "react": "^18.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "*",
+    "vitest": "*"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

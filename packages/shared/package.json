@@ -1,0 +1,30 @@
+{
+  "name": "@tannur/shared",
+  "version": "0.1.0",
+  "description": "Shared types and utilities for Tannur SDKs",
+  "keywords": ["tannur", "event-sourcing", "baas", "types", "shared"],
+  "homepage": "https://github.com/Z10N-exe/tannur#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z10N-exe/tannur.git",
+    "directory": "packages/shared"
+  },
+  "license": "Apache-2.0",
+  "author": "Z10N-exe",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

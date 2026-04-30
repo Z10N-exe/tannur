@@ -1,0 +1,47 @@
+{
+  "name": "tannur-universal",
+  "version": "0.1.0",
+  "description": "Universal JavaScript SDK for Tannur Event-Sourced BaaS - works in Node.js, browsers, and edge environments",
+  "keywords": ["tannur", "event-sourcing", "baas", "universal", "javascript", "typescript"],
+  "homepage": "https://github.com/Z10N-exe/tannur#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z10N-exe/tannur.git",
+    "directory": "packages/universal-sdk"
+  },
+  "license": "MIT",
+  "author": "Z10N-exe",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tannur/shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "fast-check": "^3.19.0",
+    "tsup": "^8.0.0",
+    "typescript": "*",
+    "vitest": "*"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

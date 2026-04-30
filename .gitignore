@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.example
+*.tsbuildinfo
+
+# Supabase - internal infrastructure
+supabase/
+
+# Kiro - internal planning and specs
+.kiro/
+
+# Deployment configuration - internal infrastructure
+vercel.json
+
+# Local credentials and API keys
+.tannur
+

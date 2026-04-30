@@ -1,0 +1,58 @@
+{
+  "name": "@tannur/react-native",
+  "version": "0.1.0",
+  "description": "React Native SDK for Tannur Event-Sourced BaaS with offline support",
+  "keywords": ["tannur", "event-sourcing", "baas", "react-native", "mobile", "offline", "typescript"],
+  "homepage": "https://github.com/Z10N-exe/tannur#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z10N-exe/tannur.git",
+    "directory": "packages/react-native-sdk"
+  },
+  "license": "MIT",
+  "author": "Z10N-exe",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "react-native": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "react-native": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --bundle",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tannur/shared": "*",
+    "tannur-universal": "*"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "^12.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.72.0",
+    "@types/node": "^20.0.0",
+    "react": "^18.0.0",
+    "react-native": "^0.72.0",
+    "tsup": "^8.0.0",
+    "typescript": "*",
+    "vitest": "*"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
